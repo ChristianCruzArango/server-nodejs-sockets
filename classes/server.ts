@@ -26,6 +26,7 @@ export default class Server {
         this.port = SERVER_PORT;
 
         this.httpServer = new http.Server( this.app );
+        //El servidor del socket..sabe que persona esta conectada
         this.io = socketIO( this.httpServer );        
 
         this.escucharSockets();
